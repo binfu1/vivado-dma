@@ -1,3 +1,8 @@
+xdma-hbm-4ch/
+xdma-mm-ddr-hbm-flash/
+xdma-mm-ddr-hbm/
+xdma-mm-ddr/
+
 xdma-mm/proj*/*
 xdma-mm/.Xil
 xdma-mm/*.jou
@@ -15,6 +20,18 @@ qdma/.Xil
 qdma/*.jou
 qdma/*.log
 qdma/*.str
+
+xdma-hbm/proj*/*
+xdma-hbm/.Xil
+xdma-hbm/*.jou
+xdma-hbm/*.log
+xdma-hbm/*.str
+
+xdma-3ddr/proj*/*
+xdma-3ddr/.Xil
+xdma-3ddr/*.jou
+xdma-3ddr/*.log
+xdma-3ddr/*.str
 
 xdma-driver/xdma/*.cmd
 xdma-driver/xdma/*.o
