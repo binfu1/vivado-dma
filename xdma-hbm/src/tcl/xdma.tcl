@@ -128,6 +128,7 @@ xilinx.com:ip:axi_bram_ctrl:4.1\
 xilinx.com:ip:util_ds_buf:2.1\
 xilinx.com:ip:clk_wiz:6.0\
 xilinx.com:ip:hbm:1.0\
+xilinx.com:ip:ila:6.2\
 xilinx.com:ip:proc_sys_reset:5.0\
 xilinx.com:ip:xdma:4.1\
 "
@@ -233,24 +234,24 @@ proc create_root_design { parentCell } {
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {40.0} \
-   CONFIG.CLKOUT1_JITTER {121.297} \
-   CONFIG.CLKOUT1_PHASE_ERROR {142.582} \
+   CONFIG.CLKOUT1_JITTER {134.506} \
+   CONFIG.CLKOUT1_PHASE_ERROR {154.678} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100.000} \
-   CONFIG.CLKOUT2_JITTER {94.370} \
-   CONFIG.CLKOUT2_PHASE_ERROR {142.582} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {450.000} \
-   CONFIG.CLKOUT2_USED {true} \
+   CONFIG.CLKOUT2_JITTER {167.067} \
+   CONFIG.CLKOUT2_PHASE_ERROR {161.613} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT2_USED {false} \
    CONFIG.CLKOUT3_JITTER {167.067} \
    CONFIG.CLKOUT3_PHASE_ERROR {161.613} \
    CONFIG.CLKOUT3_USED {false} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {27.000} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} \
    CONFIG.MMCM_CLKIN1_PERIOD {4.000} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {13.500} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {3} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.000} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
    CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
    CONFIG.MMCM_DIVCLK_DIVIDE {5} \
-   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.NUM_OUT_CLKS {1} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
    CONFIG.USE_LOCKED {false} \
@@ -259,22 +260,52 @@ proc create_root_design { parentCell } {
   # Create instance: hbm_inst, and set properties
   set hbm_inst [ create_bd_cell -type ip -vlnv xilinx.com:ip:hbm:1.0 hbm_inst ]
   set_property -dict [ list \
-   CONFIG.HBM_MMCM1_FBOUT_MULT0 {9} \
-   CONFIG.HBM_MMCM_FBOUT_MULT0 {9} \
+   CONFIG.HBM_MMCM1_FBOUT_MULT0 {10} \
+   CONFIG.HBM_MMCM_FBOUT_MULT0 {10} \
    CONFIG.USER_APB_EN {false} \
-   CONFIG.USER_AXI_CLK1_FREQ {450} \
-   CONFIG.USER_AXI_CLK_FREQ {450} \
+   CONFIG.USER_AXI_CLK1_FREQ {250} \
+   CONFIG.USER_AXI_CLK_FREQ {250} \
+   CONFIG.USER_AXI_INPUT_CLK_FREQ {100} \
+   CONFIG.USER_AXI_INPUT_CLK_NS {10.000} \
+   CONFIG.USER_AXI_INPUT_CLK_PS {10000} \
+   CONFIG.USER_AXI_INPUT_CLK_XDC {10.000} \
    CONFIG.USER_CLK_SEL_LIST0 {AXI_00_ACLK} \
    CONFIG.USER_CLK_SEL_LIST1 {AXI_16_ACLK} \
+   CONFIG.USER_DFI_CLK0_FREQ {450.000} \
    CONFIG.USER_DIS_REF_CLK_BUFG {FALSE} \
+   CONFIG.USER_HBM_CP_0 {6} \
+   CONFIG.USER_HBM_CP_1 {6} \
    CONFIG.USER_HBM_DENSITY {8GB} \
+   CONFIG.USER_HBM_FBDIV_0 {36} \
+   CONFIG.USER_HBM_FBDIV_1 {36} \
+   CONFIG.USER_HBM_HEX_CP_RES_0 {0x0000A600} \
+   CONFIG.USER_HBM_HEX_CP_RES_1 {0x0000A600} \
+   CONFIG.USER_HBM_HEX_FBDIV_CLKOUTDIV_0 {0x00000902} \
+   CONFIG.USER_HBM_HEX_FBDIV_CLKOUTDIV_1 {0x00000902} \
+   CONFIG.USER_HBM_HEX_LOCK_FB_REF_DLY_1 {0x00001f1f} \
+   CONFIG.USER_HBM_LOCK_FB_DLY_1 {31} \
+   CONFIG.USER_HBM_LOCK_REF_DLY_1 {31} \
+   CONFIG.USER_HBM_REF_OUT_CLK_0 {1800} \
+   CONFIG.USER_HBM_RES_0 {10} \
+   CONFIG.USER_HBM_RES_1 {10} \
    CONFIG.USER_HBM_STACK {2} \
+   CONFIG.USER_HBM_TCK_0 {900} \
+   CONFIG.USER_HBM_TCK_0_PERIOD {1.1111111111111112} \
    CONFIG.USER_INIT_TIMEOUT_VAL {0} \
+   CONFIG.USER_LINE_RATE_0 {div4} \
+   CONFIG.USER_LINE_RATE_1 {div4} \
+   CONFIG.USER_LINE_RATE_2 {div4} \
+   CONFIG.USER_LINE_RATE_3 {div4} \
+   CONFIG.USER_LINE_RATE_4 {div4} \
+   CONFIG.USER_LINE_RATE_5 {div4} \
+   CONFIG.USER_LINE_RATE_6 {div4} \
+   CONFIG.USER_LINE_RATE_7 {div4} \
    CONFIG.USER_MC0_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC0_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC0_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC0_EN_DATA_MASK {false} \
    CONFIG.USER_MC0_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC0_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC0_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC10_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC10_ENABLE_ECC_CORRECTION {true} \
@@ -317,42 +348,49 @@ proc create_root_design { parentCell } {
    CONFIG.USER_MC1_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC1_EN_DATA_MASK {false} \
    CONFIG.USER_MC1_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC1_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC1_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC2_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC2_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC2_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC2_EN_DATA_MASK {false} \
    CONFIG.USER_MC2_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC2_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC2_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC3_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC3_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC3_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC3_EN_DATA_MASK {false} \
    CONFIG.USER_MC3_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC3_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC3_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC4_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC4_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC4_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC4_EN_DATA_MASK {false} \
    CONFIG.USER_MC4_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC4_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC4_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC5_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC5_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC5_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC5_EN_DATA_MASK {false} \
    CONFIG.USER_MC5_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC5_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC5_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC6_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC6_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC6_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC6_EN_DATA_MASK {false} \
    CONFIG.USER_MC6_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC6_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC6_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC7_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC7_ENABLE_ECC_CORRECTION {true} \
    CONFIG.USER_MC7_ENABLE_ECC_SCRUBBING {true} \
    CONFIG.USER_MC7_EN_DATA_MASK {false} \
    CONFIG.USER_MC7_INITILIZE_MEM_USING_ECC_SCRUB {true} \
+   CONFIG.USER_MC7_REF_CMD_PERIOD {0x0DB6} \
    CONFIG.USER_MC7_TEMP_CTRL_SELF_REF_INTVL {true} \
    CONFIG.USER_MC8_ECC_SCRUB_PERIOD {0x0032} \
    CONFIG.USER_MC8_ENABLE_ECC_CORRECTION {true} \
@@ -382,6 +420,16 @@ proc create_root_design { parentCell } {
    CONFIG.USER_MC_ENABLE_13 {TRUE} \
    CONFIG.USER_MC_ENABLE_14 {TRUE} \
    CONFIG.USER_MC_ENABLE_15 {TRUE} \
+   CONFIG.USER_MC_ENABLE_APB_01 {TRUE} \
+   CONFIG.USER_MEMORY_DISPLAY {8192} \
+   CONFIG.USER_PHY_ENABLE_08 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_09 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_10 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_11 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_12 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_13 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_14 {TRUE} \
+   CONFIG.USER_PHY_ENABLE_15 {TRUE} \
    CONFIG.USER_SAXI_00 {true} \
    CONFIG.USER_SAXI_01 {false} \
    CONFIG.USER_SAXI_02 {false} \
@@ -414,26 +462,43 @@ proc create_root_design { parentCell } {
    CONFIG.USER_SAXI_29 {false} \
    CONFIG.USER_SAXI_30 {false} \
    CONFIG.USER_SAXI_31 {false} \
+   CONFIG.USER_SINGLE_STACK_SELECTION {LEFT} \
    CONFIG.USER_SWITCH_ENABLE_01 {TRUE} \
+   CONFIG.USER_tFAW_0 {0x00F} \
+   CONFIG.USER_tRAS_0 {0x1E} \
+   CONFIG.USER_tRCDRD_0 {0x0D} \
+   CONFIG.USER_tRCDWR_0 {0x09} \
+   CONFIG.USER_tRC_0 {0x2B} \
+   CONFIG.USER_tRFCSB_0 {0x90} \
+   CONFIG.USER_tRFC_0 {0x0EA} \
+   CONFIG.USER_tRP_0 {0x0D} \
+   CONFIG.USER_tRRDL_0 {0x04} \
+   CONFIG.USER_tRRDS_0 {0x04} \
+   CONFIG.USER_tRREFD_0 {0x8} \
+   CONFIG.USER_tWR_0 {0x0F} \
+   CONFIG.USER_tWTRL_0 {0x8} \
+   CONFIG.USER_tWTRS_0 {0x4} \
+   CONFIG.USER_tXP_0 {0x07} \
  ] $hbm_inst
+
+  # Create instance: ila_xdma, and set properties
+  set ila_xdma [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_xdma ]
 
   # Create instance: interconnect_axi_xdma, and set properties
   set interconnect_axi_xdma [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 interconnect_axi_xdma ]
   set_property -dict [ list \
    CONFIG.NUM_MI {1} \
+   CONFIG.S00_HAS_DATA_FIFO {0} \
  ] $interconnect_axi_xdma
 
   # Create instance: interconnect_axil, and set properties
   set interconnect_axil [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 interconnect_axil ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {2} \
+   CONFIG.NUM_MI {1} \
  ] $interconnect_axil
 
   # Create instance: proc_sys_reset_100m, and set properties
   set proc_sys_reset_100m [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_100m ]
-
-  # Create instance: proc_sys_reset_450m, and set properties
-  set proc_sys_reset_450m [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_450m ]
 
   # Create instance: xdma, and set properties
   set xdma [ create_bd_cell -type ip -vlnv xilinx.com:ip:xdma:4.1 xdma ]
@@ -450,13 +515,13 @@ proc create_root_design { parentCell } {
    CONFIG.axil_master_64bit_en {true} \
    CONFIG.axil_master_prefetchable {true} \
    CONFIG.axilite_master_en {true} \
-   CONFIG.axilite_master_size {256} \
+   CONFIG.axilite_master_size {1} \
    CONFIG.axist_bypass_en {false} \
    CONFIG.axisten_freq {250} \
    CONFIG.cfg_mgmt_if {false} \
    CONFIG.coreclk_freq {500} \
    CONFIG.pcie_blk_locn {PCIE4C_X1Y0} \
-   CONFIG.pf0_device_id {903e} \
+   CONFIG.pf0_device_id {903F} \
    CONFIG.pf0_msi_cap_multimsgcap {1_vector} \
    CONFIG.pf0_msix_cap_pba_bir {BAR_3:2} \
    CONFIG.pf0_msix_cap_table_bir {BAR_3:2} \
@@ -473,7 +538,8 @@ proc create_root_design { parentCell } {
   # Create interface connections
   connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_pins interconnect_axil/S00_AXI] [get_bd_intf_pins xdma/M_AXI_LITE]
   connect_bd_intf_net -intf_net bram_ctrl_axil_BRAM_PORTA [get_bd_intf_pins bram_axil/BRAM_PORTA] [get_bd_intf_pins bram_ctrl_axil/BRAM_PORTA]
-  connect_bd_intf_net -intf_net interconnect_axi_M01_AXI [get_bd_intf_pins hbm_inst/SAXI_00] [get_bd_intf_pins interconnect_axi_xdma/M00_AXI]
+  connect_bd_intf_net -intf_net interconnect_axi_xdma_M00_AXI [get_bd_intf_pins hbm_inst/SAXI_00] [get_bd_intf_pins interconnect_axi_xdma/M00_AXI]
+connect_bd_intf_net -intf_net [get_bd_intf_nets interconnect_axi_xdma_M00_AXI] [get_bd_intf_pins ila_xdma/SLOT_0_AXI] [get_bd_intf_pins interconnect_axi_xdma/M00_AXI]
   connect_bd_intf_net -intf_net interconnect_axil_M00_AXI [get_bd_intf_pins bram_ctrl_axil/S_AXI] [get_bd_intf_pins interconnect_axil/M00_AXI]
   connect_bd_intf_net -intf_net sys_clk_1 [get_bd_intf_ports sys_clk] [get_bd_intf_pins buf_sysclk/CLK_IN_D]
   connect_bd_intf_net -intf_net xdma_M_AXI [get_bd_intf_pins interconnect_axi_xdma/S00_AXI] [get_bd_intf_pins xdma/M_AXI]
@@ -482,17 +548,15 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net buf_sysclk_IBUF_DS_ODIV2 [get_bd_pins buf_sysclk/IBUF_DS_ODIV2] [get_bd_pins xdma/sys_clk]
   connect_bd_net -net buf_sysclk_IBUF_OUT [get_bd_pins buf_sysclk/IBUF_OUT] [get_bd_pins xdma/sys_clk_gt]
-  connect_bd_net -net clk_wiz_clk_out2 [get_bd_pins clk_wiz/clk_out2] [get_bd_pins hbm_inst/AXI_00_ACLK] [get_bd_pins interconnect_axi_xdma/M00_ACLK] [get_bd_pins proc_sys_reset_450m/slowest_sync_clk]
   connect_bd_net -net clk_wiz_clk_out5 [get_bd_pins clk_wiz/clk_out1] [get_bd_pins hbm_inst/APB_0_PCLK] [get_bd_pins hbm_inst/APB_1_PCLK] [get_bd_pins proc_sys_reset_100m/slowest_sync_clk]
   connect_bd_net -net hbm_refclk_1 [get_bd_ports hbm_refclk] [get_bd_pins hbm_inst/HBM_REF_CLK_0] [get_bd_pins hbm_inst/HBM_REF_CLK_1]
   connect_bd_net -net proc_sys_reset_100m_interconnect_aresetn [get_bd_pins hbm_inst/APB_0_PRESET_N] [get_bd_pins hbm_inst/APB_1_PRESET_N] [get_bd_pins proc_sys_reset_100m/interconnect_aresetn]
-  connect_bd_net -net proc_sys_reset_450m_interconnect_aresetn [get_bd_pins hbm_inst/AXI_00_ARESET_N] [get_bd_pins interconnect_axi_xdma/M00_ARESETN] [get_bd_pins proc_sys_reset_450m/interconnect_aresetn]
   connect_bd_net -net sys_rstn_1 [get_bd_ports sys_rstn] [get_bd_pins xdma/sys_rst_n]
-  connect_bd_net -net xdma_axi_aclk1 [get_bd_pins bram_ctrl_axil/s_axi_aclk] [get_bd_pins clk_wiz/clk_in1] [get_bd_pins interconnect_axi_xdma/ACLK] [get_bd_pins interconnect_axi_xdma/S00_ACLK] [get_bd_pins interconnect_axil/ACLK] [get_bd_pins interconnect_axil/M00_ACLK] [get_bd_pins interconnect_axil/M01_ACLK] [get_bd_pins interconnect_axil/S00_ACLK] [get_bd_pins xdma/axi_aclk]
-  connect_bd_net -net xdma_axi_aresetn1 [get_bd_pins bram_ctrl_axil/s_axi_aresetn] [get_bd_pins clk_wiz/resetn] [get_bd_pins interconnect_axi_xdma/ARESETN] [get_bd_pins interconnect_axi_xdma/S00_ARESETN] [get_bd_pins interconnect_axil/ARESETN] [get_bd_pins interconnect_axil/M00_ARESETN] [get_bd_pins interconnect_axil/M01_ARESETN] [get_bd_pins interconnect_axil/S00_ARESETN] [get_bd_pins proc_sys_reset_100m/ext_reset_in] [get_bd_pins proc_sys_reset_450m/ext_reset_in] [get_bd_pins xdma/axi_aresetn]
+  connect_bd_net -net xdma_axi_aclk1 [get_bd_pins bram_ctrl_axil/s_axi_aclk] [get_bd_pins clk_wiz/clk_in1] [get_bd_pins hbm_inst/AXI_00_ACLK] [get_bd_pins ila_xdma/clk] [get_bd_pins interconnect_axi_xdma/ACLK] [get_bd_pins interconnect_axi_xdma/M00_ACLK] [get_bd_pins interconnect_axi_xdma/S00_ACLK] [get_bd_pins interconnect_axil/ACLK] [get_bd_pins interconnect_axil/M00_ACLK] [get_bd_pins interconnect_axil/S00_ACLK] [get_bd_pins xdma/axi_aclk]
+  connect_bd_net -net xdma_axi_aresetn1 [get_bd_pins bram_ctrl_axil/s_axi_aresetn] [get_bd_pins clk_wiz/resetn] [get_bd_pins hbm_inst/AXI_00_ARESET_N] [get_bd_pins interconnect_axi_xdma/ARESETN] [get_bd_pins interconnect_axi_xdma/M00_ARESETN] [get_bd_pins interconnect_axi_xdma/S00_ARESETN] [get_bd_pins interconnect_axil/ARESETN] [get_bd_pins interconnect_axil/M00_ARESETN] [get_bd_pins interconnect_axil/S00_ARESETN] [get_bd_pins proc_sys_reset_100m/ext_reset_in] [get_bd_pins xdma/axi_aresetn]
 
   # Create address segments
-  assign_bd_address -offset 0xC0000000 -range 0x00002000 -target_address_space [get_bd_addr_spaces xdma/M_AXI_LITE] [get_bd_addr_segs bram_ctrl_axil/S_AXI/Mem0] -force
+  assign_bd_address -offset 0x00000400 -range 0x00000400 -target_address_space [get_bd_addr_spaces xdma/M_AXI_LITE] [get_bd_addr_segs bram_ctrl_axil/S_AXI/Mem0] -force
   assign_bd_address -offset 0x00000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs hbm_inst/SAXI_00/HBM_MEM00] -force
   assign_bd_address -offset 0x10000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs hbm_inst/SAXI_00/HBM_MEM01] -force
   assign_bd_address -offset 0x20000000 -range 0x10000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs hbm_inst/SAXI_00/HBM_MEM02] -force

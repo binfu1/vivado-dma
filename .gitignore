@@ -1,6 +1,7 @@
 xdma-hbm-4ch/
 xdma-mm-ddr-hbm-flash/
 xdma-mm-ddr-hbm/
+xdma-hbm-right/
 xdma-mm-ddr/
 
 xdma-mm/proj*/*

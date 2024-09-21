@@ -5,7 +5,7 @@ set_property PACKAGE_PIN AR14 [get_ports {sys_clk_clk_n}]
 # rst
 set_property PACKAGE_PIN C19 [get_ports sys_rstn]
 set_property IOSTANDARD LVCMOS18 [get_ports sys_rstn]
-# soc pcie
+# pcie
 set_property PACKAGE_PIN AL1  [get_ports pcie_mgt_rxn[ 0]]
 set_property PACKAGE_PIN AM3  [get_ports pcie_mgt_rxn[ 1]]
 set_property PACKAGE_PIN AN5  [get_ports pcie_mgt_rxn[ 2]]
@@ -73,5 +73,3 @@ set_property PACKAGE_PIN BA11 [get_ports pcie_mgt_txp[12]]
 set_property PACKAGE_PIN BB9  [get_ports pcie_mgt_txp[13]]
 set_property PACKAGE_PIN BC11 [get_ports pcie_mgt_txp[14]]
 set_property PACKAGE_PIN BC7  [get_ports pcie_mgt_txp[15]]
-
-# host pcie

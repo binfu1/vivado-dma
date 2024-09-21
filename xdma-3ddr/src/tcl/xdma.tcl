@@ -235,11 +235,14 @@ proc create_root_design { parentCell } {
   # Create instance: ddr4_0, and set properties
   set ddr4_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ddr4:2.2 ddr4_0 ]
   set_property -dict [ list \
+   CONFIG.C0.BANK_GROUP_WIDTH {2} \
+   CONFIG.C0.CS_WIDTH {1} \
    CONFIG.C0.DDR4_AxiAddressWidth {33} \
    CONFIG.C0.DDR4_AxiDataWidth {512} \
    CONFIG.C0.DDR4_CLKOUT0_DIVIDE {5} \
-   CONFIG.C0.DDR4_CasLatency {16} \
+   CONFIG.C0.DDR4_CasLatency {17} \
    CONFIG.C0.DDR4_CasWriteLatency {12} \
+   CONFIG.C0.DDR4_Clamshell {false} \
    CONFIG.C0.DDR4_DataMask {NO_DM_NO_DBI} \
    CONFIG.C0.DDR4_DataWidth {72} \
    CONFIG.C0.DDR4_Ecc {true} \
@@ -251,11 +254,14 @@ proc create_root_design { parentCell } {
   # Create instance: ddr4_1, and set properties
   set ddr4_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ddr4:2.2 ddr4_1 ]
   set_property -dict [ list \
+   CONFIG.C0.BANK_GROUP_WIDTH {2} \
+   CONFIG.C0.CS_WIDTH {1} \
    CONFIG.C0.DDR4_AxiAddressWidth {33} \
    CONFIG.C0.DDR4_AxiDataWidth {512} \
    CONFIG.C0.DDR4_CLKOUT0_DIVIDE {5} \
-   CONFIG.C0.DDR4_CasLatency {16} \
+   CONFIG.C0.DDR4_CasLatency {17} \
    CONFIG.C0.DDR4_CasWriteLatency {12} \
+   CONFIG.C0.DDR4_Clamshell {false} \
    CONFIG.C0.DDR4_DataMask {NO_DM_NO_DBI} \
    CONFIG.C0.DDR4_DataWidth {72} \
    CONFIG.C0.DDR4_Ecc {true} \
@@ -267,11 +273,14 @@ proc create_root_design { parentCell } {
   # Create instance: ddr4_2, and set properties
   set ddr4_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ddr4:2.2 ddr4_2 ]
   set_property -dict [ list \
+   CONFIG.C0.BANK_GROUP_WIDTH {2} \
+   CONFIG.C0.CS_WIDTH {1} \
    CONFIG.C0.DDR4_AxiAddressWidth {33} \
    CONFIG.C0.DDR4_AxiDataWidth {512} \
    CONFIG.C0.DDR4_CLKOUT0_DIVIDE {5} \
-   CONFIG.C0.DDR4_CasLatency {16} \
+   CONFIG.C0.DDR4_CasLatency {17} \
    CONFIG.C0.DDR4_CasWriteLatency {12} \
+   CONFIG.C0.DDR4_Clamshell {false} \
    CONFIG.C0.DDR4_DataMask {NO_DM_NO_DBI} \
    CONFIG.C0.DDR4_DataWidth {72} \
    CONFIG.C0.DDR4_Ecc {true} \
@@ -350,7 +359,6 @@ proc create_root_design { parentCell } {
    CONFIG.cfg_mgmt_if {false} \
    CONFIG.coreclk_freq {500} \
    CONFIG.pcie_blk_locn {PCIE4C_X1Y0} \
-   CONFIG.vendor_id {1BD4} \
    CONFIG.pf0_device_id {903F} \
    CONFIG.pf0_msix_cap_pba_bir {BAR_3:2} \
    CONFIG.pf0_msix_cap_table_bir {BAR_3:2} \
@@ -358,6 +366,7 @@ proc create_root_design { parentCell } {
    CONFIG.pl_link_cap_max_link_width {X16} \
    CONFIG.plltype {QPLL1} \
    CONFIG.select_quad {GTY_Quad_227} \
+   CONFIG.vendor_id {1BD4} \
    CONFIG.xdma_pcie_64bit_en {true} \
    CONFIG.xdma_pcie_prefetchable {true} \
  ] $xdma
@@ -400,12 +409,12 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets xdma_ddr_M_AXI_LITE] [get_bd_int
   connect_bd_net -net xdma_ddr_axi_aresetn [get_bd_pins interconnect_axi/ARESETN] [get_bd_pins interconnect_axi/S00_ARESETN] [get_bd_pins interconnect_axil/ARESETN] [get_bd_pins interconnect_axil/S00_ARESETN] [get_bd_pins xdma/axi_aresetn]
 
   # Create address segments
+  assign_bd_address -offset 0x00000000 -range 0x000200000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK] -force
+  assign_bd_address -offset 0x80000000 -range 0x00100000 -target_address_space [get_bd_addr_spaces xdma/M_AXI_LITE] [get_bd_addr_segs ddr4_0/C0_DDR4_MEMORY_MAP_CTRL/C0_REG] -force
   assign_bd_address -offset 0x000200000000 -range 0x000200000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs ddr4_1/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK] -force
   assign_bd_address -offset 0x80100000 -range 0x00100000 -target_address_space [get_bd_addr_spaces xdma/M_AXI_LITE] [get_bd_addr_segs ddr4_1/C0_DDR4_MEMORY_MAP_CTRL/C0_REG] -force
   assign_bd_address -offset 0x000400000000 -range 0x000200000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs ddr4_2/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK] -force
   assign_bd_address -offset 0x80200000 -range 0x00100000 -target_address_space [get_bd_addr_spaces xdma/M_AXI_LITE] [get_bd_addr_segs ddr4_2/C0_DDR4_MEMORY_MAP_CTRL/C0_REG] -force
-  assign_bd_address -offset 0x00000000 -range 0x000200000000 -target_address_space [get_bd_addr_spaces xdma/M_AXI] [get_bd_addr_segs ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK] -force
-  assign_bd_address -offset 0x80000000 -range 0x00100000 -target_address_space [get_bd_addr_spaces xdma/M_AXI_LITE] [get_bd_addr_segs ddr4_0/C0_DDR4_MEMORY_MAP_CTRL/C0_REG] -force
 
 
   # Restore current instance

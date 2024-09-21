@@ -1,4 +1,4 @@
-# DDR difference clock 300MHz
+# Channal B
 create_clock -period 3.332 -name ddr4_clk_2_clk_p -waveform {0.000 1.666} [get_ports ddr4_clk_2_clk_p]
 set_property PACKAGE_PIN E31 [get_ports ddr4_clk_2_clk_p]
 set_property PACKAGE_PIN E32 [get_ports ddr4_clk_2_clk_n]
