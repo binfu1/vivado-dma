@@ -1,0 +1,5 @@
+device: /dev/xdma0_user, address: 0x8 (0x0+0x8), access write.
+access width: word (32-bits)
+character device /dev/xdma0_user opened.
+Memory 0x0 mapped at address 0x7f709ad16000.
+Read 32-bit value at address 0x8 (0x7f709ad16008): 0x0001000f

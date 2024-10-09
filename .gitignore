@@ -34,6 +34,12 @@ xdma-3ddr/*.jou
 xdma-3ddr/*.log
 xdma-3ddr/*.str
 
+hw_test/proj/*
+hw_test/.Xil
+hw_test/*.jou
+hw_test/*.log
+hw_test/*.str
+
 xdma-driver/xdma/*.cmd
 xdma-driver/xdma/*.o
 xdma-driver/xdma/*.order
