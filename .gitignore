@@ -35,6 +35,7 @@ xdma-3ddr/*.log
 xdma-3ddr/*.str
 
 hw_test/proj/*
+hw_test/bit/*
 hw_test/.Xil
 hw_test/*.jou
 hw_test/*.log

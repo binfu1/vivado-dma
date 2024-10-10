@@ -35,6 +35,7 @@ add_files -fileset constrs_1 -norecurse ${xdcDir}/ddr0.xdc
 add_files -fileset constrs_1 -norecurse ${xdcDir}/ddr1.xdc
 add_files -fileset constrs_1 -norecurse ${xdcDir}/ddr2.xdc
 add_files -fileset constrs_1 -norecurse ${xdcDir}/xdma.xdc
+add_files -fileset constrs_1 -norecurse ${xdcDir}/flash.xdc
 update_compile_order -fileset sources_1
 set_property top top [current_fileset]
 
