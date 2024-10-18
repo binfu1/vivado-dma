@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2000001fs"></ZoomEndTime>
+      <Cursor1Time time="1135555fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="312"></NameColumnWidth>
+      <ValueColumnWidth column_width="154"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="33" />
+   <wvobject type="logic" fp_name="/top_tb/sclk">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/clk450">
+      <obj_property name="ElementShortName">clk450</obj_property>
+      <obj_property name="ObjectShortName">clk450</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_ARREADY">
+      <obj_property name="ElementShortName">M00_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_ARVALID">
+      <obj_property name="ElementShortName">M00_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_ARADDR">
+      <obj_property name="ElementShortName">M00_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_ARADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_RREADY">
+      <obj_property name="ElementShortName">M00_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_RVALID">
+      <obj_property name="ElementShortName">M00_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_RDATA">
+      <obj_property name="ElementShortName">M00_AXI_RDATA[255:0]</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_RDATA[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_RLAST">
+      <obj_property name="ElementShortName">M00_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_RLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_ARREADY">
+      <obj_property name="ElementShortName">S00_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_ARVALID">
+      <obj_property name="ElementShortName">S00_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_ARADDR">
+      <obj_property name="ElementShortName">S00_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_ARADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_RREADY">
+      <obj_property name="ElementShortName">S00_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_RVALID">
+      <obj_property name="ElementShortName">S00_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_RDATA">
+      <obj_property name="ElementShortName">S00_AXI_RDATA[511:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_RDATA[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_RLAST">
+      <obj_property name="ElementShortName">S00_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_RLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_AWREADY">
+      <obj_property name="ElementShortName">M00_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_AWVALID">
+      <obj_property name="ElementShortName">M00_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_AWADDR">
+      <obj_property name="ElementShortName">M00_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_AWADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_WREADY">
+      <obj_property name="ElementShortName">M00_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_WVALID">
+      <obj_property name="ElementShortName">M00_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_WDATA">
+      <obj_property name="ElementShortName">M00_AXI_WDATA[255:0]</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_WDATA[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_WSTRB">
+      <obj_property name="ElementShortName">M00_AXI_WSTRB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_WSTRB[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /M00_AXI_WLAST">
+      <obj_property name="ElementShortName">M00_AXI_WLAST</obj_property>
+      <obj_property name="ObjectShortName">M00_AXI_WLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_AWREADY">
+      <obj_property name="ElementShortName">S00_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_AWVALID">
+      <obj_property name="ElementShortName">S00_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_AWADDR">
+      <obj_property name="ElementShortName">S00_AXI_AWADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_AWADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_WREADY">
+      <obj_property name="ElementShortName">S00_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_WVALID">
+      <obj_property name="ElementShortName">S00_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_WDATA">
+      <obj_property name="ElementShortName">S00_AXI_WDATA[511:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_WDATA[511:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_WSTRB">
+      <obj_property name="ElementShortName">S00_AXI_WSTRB[63:0]</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_WSTRB[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].axi_itct_i /S00_AXI_WLAST">
+      <obj_property name="ElementShortName">S00_AXI_WLAST</obj_property>
+      <obj_property name="ObjectShortName">S00_AXI_WLAST</obj_property>
+   </wvobject>
+</wave_config>

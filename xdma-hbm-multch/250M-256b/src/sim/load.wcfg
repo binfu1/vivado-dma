@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="281000001fs"></ZoomEndTime>
+      <Cursor1Time time="274052000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="174"></NameColumnWidth>
+      <ValueColumnWidth column_width="162"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="68" />
+   <wvobject type="logic" fp_name="/top_tb/sclk">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /rch_cnt">
+      <obj_property name="ElementShortName">rch_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rch_cnt[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /loop_cnt_rch">
+      <obj_property name="ElementShortName">loop_cnt_rch[7:0]</obj_property>
+      <obj_property name="ObjectShortName">loop_cnt_rch[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /core_cnt_rch">
+      <obj_property name="ElementShortName">core_cnt_rch[4:0]</obj_property>
+      <obj_property name="ObjectShortName">core_cnt_rch[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /arready">
+      <obj_property name="ElementShortName">arready</obj_property>
+      <obj_property name="ObjectShortName">arready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /arvalid">
+      <obj_property name="ElementShortName">arvalid</obj_property>
+      <obj_property name="ObjectShortName">arvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /araddr">
+      <obj_property name="ElementShortName">araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">araddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /rready">
+      <obj_property name="ElementShortName">rready</obj_property>
+      <obj_property name="ObjectShortName">rready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /rvalid">
+      <obj_property name="ElementShortName">rvalid</obj_property>
+      <obj_property name="ObjectShortName">rvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /rdata">
+      <obj_property name="ElementShortName">rdata[255:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /rlast">
+      <obj_property name="ElementShortName">rlast</obj_property>
+      <obj_property name="ObjectShortName">rlast</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /wch_cnt">
+      <obj_property name="ElementShortName">wch_cnt[15:0]</obj_property>
+      <obj_property name="ObjectShortName">wch_cnt[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /loop_cnt_wch">
+      <obj_property name="ElementShortName">loop_cnt_wch[7:0]</obj_property>
+      <obj_property name="ObjectShortName">loop_cnt_wch[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /core_cnt_wch">
+      <obj_property name="ElementShortName">core_cnt_wch[4:0]</obj_property>
+      <obj_property name="ObjectShortName">core_cnt_wch[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /awready">
+      <obj_property name="ElementShortName">awready</obj_property>
+      <obj_property name="ObjectShortName">awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /awvalid">
+      <obj_property name="ElementShortName">awvalid</obj_property>
+      <obj_property name="ObjectShortName">awvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /awaddr">
+      <obj_property name="ElementShortName">awaddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">awaddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /wready">
+      <obj_property name="ElementShortName">wready</obj_property>
+      <obj_property name="ObjectShortName">wready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /wvalid">
+      <obj_property name="ElementShortName">wvalid</obj_property>
+      <obj_property name="ObjectShortName">wvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /wdata">
+      <obj_property name="ElementShortName">wdata[255:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /wstrb">
+      <obj_property name="ElementShortName">wstrb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wstrb[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[0].load_i /wlast">
+      <obj_property name="ElementShortName">wlast</obj_property>
+      <obj_property name="ObjectShortName">wlast</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /wea_load">
+      <obj_property name="ElementShortName">wea_load[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wea_load[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /addra_load">
+      <obj_property name="ElementShortName">addra_load[13:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_load[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load0">
+      <obj_property name="ElementShortName">dout_load0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load0[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load1">
+      <obj_property name="ElementShortName">dout_load1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load1[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load2">
+      <obj_property name="ElementShortName">dout_load2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load2[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load3">
+      <obj_property name="ElementShortName">dout_load3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load3[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load4">
+      <obj_property name="ElementShortName">dout_load4[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load4[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load5">
+      <obj_property name="ElementShortName">dout_load5[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load5[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load6">
+      <obj_property name="ElementShortName">dout_load6[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load6[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /dout_load7">
+      <obj_property name="ElementShortName">dout_load7[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load7[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /addrb_load">
+      <obj_property name="ElementShortName">addrb_load[13:0]</obj_property>
+      <obj_property name="ObjectShortName">addrb_load[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load0">
+      <obj_property name="ElementShortName">din_load0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load0[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load1">
+      <obj_property name="ElementShortName">din_load1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load1[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load2">
+      <obj_property name="ElementShortName">din_load2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load2[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load3">
+      <obj_property name="ElementShortName">din_load3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load3[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load4">
+      <obj_property name="ElementShortName">din_load4[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load4[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load5">
+      <obj_property name="ElementShortName">din_load5[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load5[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load6">
+      <obj_property name="ElementShortName">din_load6[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load6[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[0].load_i /din_load7">
+      <obj_property name="ElementShortName">din_load7[63:0]</obj_property>
+      <obj_property name="ObjectShortName">din_load7[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /launch">
+      <obj_property name="ElementShortName">launch</obj_property>
+      <obj_property name="ObjectShortName">launch</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /arready">
+      <obj_property name="ElementShortName">arready</obj_property>
+      <obj_property name="ObjectShortName">arready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /arvalid">
+      <obj_property name="ElementShortName">arvalid</obj_property>
+      <obj_property name="ObjectShortName">arvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /araddr">
+      <obj_property name="ElementShortName">araddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">araddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /rready">
+      <obj_property name="ElementShortName">rready</obj_property>
+      <obj_property name="ObjectShortName">rready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /rvalid">
+      <obj_property name="ElementShortName">rvalid</obj_property>
+      <obj_property name="ObjectShortName">rvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /rdata">
+      <obj_property name="ElementShortName">rdata[255:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /rlast">
+      <obj_property name="ElementShortName">rlast</obj_property>
+      <obj_property name="ObjectShortName">rlast</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /awready">
+      <obj_property name="ElementShortName">awready</obj_property>
+      <obj_property name="ObjectShortName">awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /awvalid">
+      <obj_property name="ElementShortName">awvalid</obj_property>
+      <obj_property name="ObjectShortName">awvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /awaddr">
+      <obj_property name="ElementShortName">awaddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">awaddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /wready">
+      <obj_property name="ElementShortName">wready</obj_property>
+      <obj_property name="ObjectShortName">wready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /wvalid">
+      <obj_property name="ElementShortName">wvalid</obj_property>
+      <obj_property name="ObjectShortName">wvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /wdata">
+      <obj_property name="ElementShortName">wdata[255:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /wstrb">
+      <obj_property name="ElementShortName">wstrb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wstrb[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top_i/\genblk1[15].load_i /wlast">
+      <obj_property name="ElementShortName">wlast</obj_property>
+      <obj_property name="ObjectShortName">wlast</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /wea_load">
+      <obj_property name="ElementShortName">wea_load[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wea_load[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /addra_load">
+      <obj_property name="ElementShortName">addra_load[13:0]</obj_property>
+      <obj_property name="ObjectShortName">addra_load[13:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load0">
+      <obj_property name="ElementShortName">dout_load0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load0[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load1">
+      <obj_property name="ElementShortName">dout_load1[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load1[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load2">
+      <obj_property name="ElementShortName">dout_load2[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load2[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load3">
+      <obj_property name="ElementShortName">dout_load3[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load3[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load4">
+      <obj_property name="ElementShortName">dout_load4[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load4[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load5">
+      <obj_property name="ElementShortName">dout_load5[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load5[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load6">
+      <obj_property name="ElementShortName">dout_load6[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load6[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top_i/\genblk1[15].load_i /dout_load7">
+      <obj_property name="ElementShortName">dout_load7[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dout_load7[63:0]</obj_property>
+   </wvobject>
+</wave_config>
